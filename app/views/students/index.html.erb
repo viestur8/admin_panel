@@ -1,10 +1,11 @@
 <h6> It's a bag of jimmies</h6>
 
 <% @students.each do |single_student| %>
-    <h2> Student Id: <%= single_student.id %> </h2>
-   <h1> <%= single_student.first_name %> <%= single_student.last_name %>  </h1>
-   <h3> <%= single_student.age %> </h3>
-   <h1> <%= single_student.cohort_id %> </h1>
+
+   <h2>Student's Name: <%= single_student.first_name %> <%= single_student.last_name %>  </h2>
+     <h3> Student Id: <%= single_student.id %> </h3>
+   <h3> Student's Age: <%= single_student.age %> </h3>
+   <h4> Cohort Number: <%= single_student.cohort_id %> </h4>
     <h4>  <a href=" /students/<%=single_student.id%>/edit">Edit</a></h4>
    <hr>
 <% end %>

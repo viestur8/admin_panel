@@ -1,0 +1,4 @@
+
+<%= form_with model: @teacher do |f| %>
+  <%= f.select :highest_edu, Teacher.highest_edus.keys %>
+<% end %>

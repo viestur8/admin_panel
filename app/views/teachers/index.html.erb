@@ -1,0 +1,8 @@
+<% @teachers.each do |single_teacher| %>
+   <h2>Teacher's Name: <%= single_teacher.first_name %> <%= single_teacher.last_name %>  </h2>
+   <h3> Teacher's Age: <%= single_teacher.age %> </h3>
+   <h3> Teacher's Highest Education: <%= single_teacher.highest_edu %> </h3>
+   <h4> Cohort Number: <%= single_teacher.cohort %> </h4>
+    <h4>  <a href=" /teachers/<%=single_teacher.id%>/edit">Edit</a></h4>
+   <hr>
+<% end %>

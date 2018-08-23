@@ -1,4 +1,5 @@
 class Cohort < ApplicationRecord
-  has_many: students
-  has_many: teachers
+  has_many :students
+  belongs_to :teacher
+  belongs_to :course
 end
