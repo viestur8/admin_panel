@@ -2,7 +2,11 @@
    <h2>Teacher's Name: <%= single_teacher.first_name %> <%= single_teacher.last_name %>  </h2>
    <h3> Teacher's Age: <%= single_teacher.age %> </h3>
    <h3> Teacher's Highest Education: <%= single_teacher.highest_edu %> </h3>
-   <h4> Cohort Number: <%= single_teacher.cohort %> </h4>
+<%= "#{single_teacher.cohorts.length} cohorts" %>
+   <% single_teacher.cohorts.each do |cohort| %>
+   <h4> Cohort Title: <%= cohort.title %> </h4>
+   <% end %>
+
     <h4>  <a href=" /teachers/<%=single_teacher.id%>/edit">Edit</a></h4>
    <hr>
 <% end %>
