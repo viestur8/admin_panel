@@ -1,12 +1,17 @@
 <% @teachers.each do |single_teacher| %>
-   <h2>Teacher's Name: <%= single_teacher.first_name %> <%= single_teacher.last_name %>  </h2>
-   <h3> Teacher's Age: <%= single_teacher.age %> </h3>
-   <h3> Teacher's Highest Education: <%= single_teacher.highest_edu %> </h3>
+<div class="card col" style="width: 18rem;">
+  <div class="card-body">
+<img class="card-img-top col" src="https://cdn.shopify.com/s/files/1/0790/0465/products/glitterbomb-1432833914-1433447206_1024x1024-4_1024x1024.jpg?v=1521744622" alt="Card image cap" height="150" width="150">
+   <h4>Teacher's Name: <%= single_teacher.first_name %> <%= single_teacher.last_name %>  </h4>
+   <h6> Teacher's Age: <%= single_teacher.age %> </h6>
+   <h6> Teacher's Highest Education: <%= single_teacher.highest_edu %> </h6>
 <%= "#{single_teacher.cohorts.length} cohorts" %>
    <% single_teacher.cohorts.each do |cohort| %>
-   <h4> Cohort Title: <%= cohort.title %> </h4>
+   <h5> Cohort Title: <%= cohort.title %> </h5>
    <% end %>
 
     <h4>  <a href=" /teachers/<%=single_teacher.id%>/edit">Edit</a></h4>
    <hr>
+ </div>
+</div>
 <% end %>

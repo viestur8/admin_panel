@@ -1,0 +1,9 @@
+console.log('Im hitting this is the new.js.erb action');
+
+//Selects hidden form element on index.html.erb
+let form = document.getElementById("course-div");
+
+//set the innerHTML to a string of html elements
+form.innerHTML = "<%= j (render 'form') %>";
+
+form.style.display = "block";

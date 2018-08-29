@@ -1,3 +1,31 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="course-card">
+
+          <% @courses.each do |single_course| %>
+          <div class="course-card" id="course-<%=single_course.id%>"" >
+             <h2>Course Name: <%= single_course.name %> </h2>
+             <h3> Total Hours in Class: <%= single_course.total_hours %> </h3>
+          <%= "#{single_course.cohorts.length} cohorts" %>
+             <% single_course.cohorts.each do |cohort| %>
+             <h4> Cohort Title: <%= cohort.title %> </h4>
+             <% end %>
+
+              <h4>  <a href=" /courses/<%=single_course.id%>">Edit</a></h4>
+             <hr>
+          <% end %>
+          <!-- #empty dive for ajax call -->
+          
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
 <% @courses.each do |single_course| %>
    <h2>Course Name: <%= single_course.name %> </h2>
    <h3> Total Hours in Class: <%= single_course.total_hours %> </h3>

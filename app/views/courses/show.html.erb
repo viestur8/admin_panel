@@ -1,0 +1,17 @@
+<div class="course-card" id="course-div">
+    <h1> <%= @course.name %> </h1>
+    <p><strong>Total Hours:</strong> <%= @course.total_hours %></p>
+    <% conn_arr = [] %>
+    <% @course.cohorts.each do |connect| %>
+        <% conn_arr.push(connect) %>
+    <% end %>
+    <p><strong>Number of Cohorts:</strong> <%= conn_arr.length %></p>
+
+</div>
+<h4>  <a href=" /courses/<%=@course.id%>/edit">Edit</a></h4>
+<hr>
+<%= link_to 'New Course', new_course_path, remote:true, id: "ajaxcall" %>
+
+<!-- #empty dive for ajax call -->
+<div id="course-form" style="display:none;">
+</div>

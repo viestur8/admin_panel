@@ -1,6 +1,6 @@
 <h1>Add a course</h1>
 
-<form action="/signup" method="post">
+<!-- <form action="/signup" method="post">
   <input type="text" name="first_name" id="first_name" placeholder="Enter First Name">
   <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name">
   <input type="date" id="bday" name="bday" label="Birthdate" placeholder="Enter DOB">
@@ -8,4 +8,12 @@
   <input type="text" name="username" id="username" placeholder="Username">
   <input type="password" name="password" id="password" placeholder="Password">
   <input type="submit" value="Go">
-</form>
+</form> -->
+
+<br>
+<%= form_with scope: :course, url: courses_path, local: true do |form| %>
+    <%= form.text_field :name, placeholder: "Enter Course Title"%>
+    <%= number_field(:course, :total_hours, in: 0..300, step: 10, placeholder: "Enter Total Hours") %>
+    <!-- <%= form.text_field :description, placeholder: "Enter a Description" %> -->
+    <%= form.submit %>
+<% end %>
