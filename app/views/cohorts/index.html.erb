@@ -1,14 +1,19 @@
 <% @cohorts.each do |single_cohort| %>
-<div class="card col" style="width: 18rem;">
+
   <div class="card-body">
   <img class="card-img-top col" src="https://www.sciencesource.com/Doc/SCS/Media/TR1_WATERMARKED/0/7/d/4/SS2562935.jpg?d63642764426" alt="Card image cap" height="150" width="150">
-    <h3> Cohort Id: <%= single_cohort.id %> </h3>
-   <h1> Cohort Title: <%= single_cohort.title %> </h1>
-   <h3> Start date: <%= single_cohort.start_date %> </h3>
+
+   <h3> Cohort Title: <%= single_cohort.title %> </h3>
+   <h4> Cohort Id: <%= single_cohort.id %> </h4>
+   <h4> Start date: <%= single_cohort.start_date %> </h4>
+   <h4> Cohort End date: <%= single_cohort.end_date %> </h4>
    <h4> Students in Cohort: <%= single_cohort.students_in_cohort %> </h4>
+   <h4> Cohort Teacher: <%= single_cohort.teacher.first_name %> <%= single_cohort.teacher.last_name %> </h4>
+   <h4> Cohort Course: <%= single_cohort.course_id %> </h4>
+
     <h4>  <a href=" /cohorts/<%=single_cohort.id%>/edit">Edit</a></h4>
    <hr>
- </div>
+
 </div>
 
 <% end %>

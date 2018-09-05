@@ -1,0 +1,2 @@
+console.log("This shall be update js file..?");
+$('#edit_course_<%= @course.id %>').replaceWith('<%= j render partial: "course", locals: {course: @course} %>');

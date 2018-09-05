@@ -1,0 +1,36 @@
+<%= form_for @cohort, remote: true do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, id: :cohort_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.text_field :start_date, id: :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.text_field :end_date, id: :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :students_in_cohort %>
+    <%= f.text_field :students_in_cohort, id: :students_in_cohort %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_id %>
+    <%= f.text_field :course_id, id: :course_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teacher_id %>
+    <%= f.text_field :teacher_id, id: :teacher_id%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

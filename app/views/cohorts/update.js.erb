@@ -1,0 +1,2 @@
+console.log("This shall be update js file..?");
+$('#edit_cohort_<%= @cohort.id %>').replaceWith('<%= j render partial: "cohort", locals: {cohort: @cohort} %>');
