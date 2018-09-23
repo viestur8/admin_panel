@@ -1,8 +1,10 @@
-// @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Stalinist+One|Tangerine");
 $roboto-slab: Cinzel;
-html {
+
+
+/*html {
   .jumbotron{
   background: url(/images/arnld.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -12,7 +14,10 @@ html {
   height: 100vh;
 
   }
+  */
+  
   body {
+      padding-top: 60px;
   font: 100% $roboto_slab;
   font-weight: normal;
   // color: $primary-color;
@@ -21,6 +26,20 @@ html {
 
   section {
     overflow: auto;
+  }
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   textarea {
@@ -114,10 +133,8 @@ h1, h2, h3, h4, h5, h6 {
     // top: -22px;
     // right: -45px;
   }
-  }
-body {
-  padding-top: 60px;
-}
+
+
 
 section {
   overflow: auto;

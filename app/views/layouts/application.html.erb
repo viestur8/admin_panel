@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Jimmy's Admin Panel</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -8,6 +9,7 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
+        <%= link_to image_tag("brain7.png", :size => "80x80", alt: "Rails logo") %>
         <%= link_to "Admin's Panel", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">

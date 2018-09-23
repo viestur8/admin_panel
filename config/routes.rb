@@ -6,4 +6,5 @@ root 'students#jimmies'
   resources :cohorts
   resources :teachers
   resources :courses
+  get  '/signup',  to: 'users#new'
 end
